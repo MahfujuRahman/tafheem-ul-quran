@@ -1315,6 +1315,8 @@
             font-style: normal;
         }
     </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ asset('frontend/css/custom.css') }}">
 </head>
 
 <body
@@ -1387,8 +1389,8 @@
         id="perfect-scrollbar-js"></script>
     <script type="text/javascript" src="{{ asset('frontend/themes/taqwa/assets/js/themejs/custom-scripts8a54.js?ver=1.0.0') }}"
         id="taqwa-custom-scripts-js"></script>
-    <script type="text/javascript" src="http://code.jivosite.com/widget/sMDBcnf9C1?ver=1.3.6.1"
-        id="jivosite_widget_code-js"></script>
+    {{-- <script type="text/javascript" src="http://code.jivosite.com/widget/sMDBcnf9C1?ver=1.3.6.1"
+        id="jivosite_widget_code-js"></script> --}}
     <script type="text/javascript" id="gt_widget_script_84629234-js-before">
         /* <![CDATA[ */
         window.gtranslateSettings = /* document.write */ window.gtranslateSettings || {};

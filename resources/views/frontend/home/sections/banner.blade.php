@@ -41,16 +41,12 @@
                                             </div><!-- Featured Cap -->
 
 
-                                            <div
-                                                class="tq-player-wrap bg-white tq-mt-140 d-flex align-items-center rounded-pill w-100">
-                                                <h6 class="mb-0 tq-bg-theme rounded-pill">Listen Holy Quran</h6>
-                                                <div class="tq-player d-flex align-items-center">
-                                                    <ul class="playlist d-none mb-0 list-unstyled">
-                                                        <li data-artist="(Abd-ur Rahman)"><a
-                                                                href="{{ asset('frontend/uploads/2021/02/surah-fateh-1.mp3') }}">Surah
-                                                                Fatiha</a></li>
-                                                    </ul>
+                                            <div class="tq-player-wrap bg-white tq-mt-140 d-flex align-items-center rounded-pill w-100">
+                                                <h6 class="mb-0 tq-bg-theme rounded-pill text-nowrap">Search</h6>
+                                                <div style="width: 100%">
+                                                    <input style="width:99%;" type="text" placeholder="Search for any Surah to read or listen..."/>
                                                 </div><!-- Player -->
+
                                             </div><!-- Player Wrap -->
                                         </div>
                                     </div><!-- Featured Cap Wrap -->

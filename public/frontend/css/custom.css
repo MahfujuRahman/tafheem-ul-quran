@@ -1,0 +1,48 @@
+header.tq-style2 .tq-header-wrapper .tq-header-inner {
+  padding: 0px !important;
+}
+.tq-header-wrapper .tq-header-menu {
+  padding: 20px;
+}
+.tq-header-wrapper .tq-header-menu nav {
+  padding-top: 20px;
+}
+.tq-header-wrapper .tq-header-menu nav ul {
+  white-space: nowrap;
+}
+@media screen and (max-width: 1200px) {
+  .tq-header-wrapper .tq-header-menu nav ul {
+    gap: 1.125rem !important;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .tq-header-wrapper .tq-header-menu nav ul {
+    gap: 2.125rem;
+  }
+}
+@media (max-width: 1400px) {
+  .tq-header-wrapper .tq-header-menu nav ul li a {
+    font-size: 14px;
+  }
+}
+.tq-header-menu nav ul li.menu-item-has-children > a::before,
+.tq-sticky-menu-inner nav ul li.menu-item-has-children > a::before {
+  content: "";
+}
+.tq-header-menu nav ul li.menu-item-has-children > a,
+.tq-sticky-menu-inner nav ul li.menu-item-has-children > a {
+  padding-right: 0rem;
+}
+.tq-select-box .dropdown > button.btn:after {
+  content: "";
+}
+@media (max-width: 995px) {
+  .tq-player-wrap > h6 {
+    width: unset;
+  }
+}
+@media (max-width: 995px) {
+  .tq-player-wrap {
+    flex-direction: row;
+  }
+}
