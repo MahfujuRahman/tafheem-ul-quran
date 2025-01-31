@@ -55,12 +55,19 @@ header.tq-style2 .tq-header-wrapper .tq-header-inner {
 .surah_list {
     .tq-quran-arabic-boxes {
         .surah_collection_boxs {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
             .heading_box {
                 p {
                     font-size: 28px;
                     color: #392f26;
                     font-weight: 700;
                     margin-bottom: 1rem;
+                }
+                @media screen and (max-width: 768px) {
+                    display: none;
                 }
             }
 
@@ -70,70 +77,73 @@ header.tq-style2 .tq-header-wrapper .tq-header-inner {
             @transition: all 0.3s ease-in-out;
 
             .heading_buttons {
-              background: @bg-light;
-              border-radius: 1.5rem;
-              display: flex;
-              align-items: center;
-              padding: 10px;
-              gap: 10px;
-              position: relative;
-              box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-              overflow: hidden;
-              width: max-content;
-
-              .active-bg {
-                position: absolute;
-                top: 50%;
-                left: 0;
-                height: 80%;
-                width: 80px;
-                background: @bg-active;
+                background: @bg-light;
                 border-radius: 1.5rem;
-                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-                transform: translateY(-50%);
-                transition: transform 0.4s ease-in-out, width 0.3s ease-in-out;
-              }
-
-              div {
                 display: flex;
                 align-items: center;
-                cursor: pointer;
+                padding: 0px;
+                margin: 0px;
                 position: relative;
-                padding: 8px 16px;
-                border-radius: 10px;
-                font-weight: 600;
-                transition: @transition;
-                z-index: 1;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                width: max-content;
 
-                button {
-                  font-size: 14px;
-                  font-weight: 600;
-                  white-space: nowrap;
-                  background: transparent;
-                  color: @primary-color;
-                  border: none;
-                  padding: 8px 12px;
-                  transition: @transition;
+                @media screen and (max-width: 768px) {
+                    display: none;
                 }
 
-                &:hover {
-                  background: fade(@primary-color, 10%);
-                  transform: scale(1.05);
+                .active-bg {
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    height: 100%;
+                    width: 80px;
+                    border-radius: 1.5rem;
+                    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                    transform: translateY(-50%);
+                    transition: transform 0.4s ease-in-out,
+                        width 0.3s ease-in-out;
                 }
-              }
 
-              .active {
-                background: @bg-active;
-              }
+                div {
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    position: relative;
+                    padding: 8px 16px;
+                    border-radius: 1.5rem;
+                    font-weight: 600;
+                    transition: @transition;
+                    z-index: 1;
+
+                    button {
+                        font-size: 14px;
+                        font-weight: 600;
+                        white-space: nowrap;
+                        background: transparent;
+                        color: @primary-color;
+                        border: none;
+                        padding: 0px 4px;
+                        transition: @transition;
+                    }
+
+                    // &:hover {
+                    //     background: fade(@primary-color, 10%);
+                    //     transform: scale(1.05);
+                    // }
+                }
             }
-
-
 
             .collection_box {
                 display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
                 gap: 1rem;
                 margin-top: 1rem;
+                margin: auto;
+
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
 
                 .tq-quran-box {
                     padding: 14px;
@@ -142,6 +152,7 @@ header.tq-style2 .tq-header-wrapper .tq-header-inner {
                     background: #fff;
                     transition: transform 0.3s ease-in-out,
                         box-shadow 0.3s ease-in-out;
+                    margin-bottom: 0px;
 
                     &:hover {
                         transform: translateY(-4px);
@@ -159,6 +170,178 @@ header.tq-style2 .tq-header-wrapper .tq-header-inner {
                         font-size: 14px;
                         color: #555;
                         margin: 0;
+                    }
+                }
+            }
+        }
+    }
+    .surah_container {
+        margin-top: 70px;
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+
+            .heading_box {
+                p {
+                    font-size: 28px;
+                    color: #392f26;
+                    font-weight: 700;
+                    margin-bottom: 1rem;
+                }
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+            }
+
+            @primary-color: #392f26;
+            @bg-light: #f3eee0;
+            @bg-active: #fff;
+            @transition: all 0.3s ease-in-out;
+
+            .heading_buttons {
+                background: @bg-light;
+                border-radius: 1.5rem;
+                display: flex;
+                align-items: center;
+                padding: 0px;
+                margin: 0px;
+                position: relative;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                width: max-content;
+
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+
+                .active-bg {
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    height: 80%;
+                    width: 80px;
+                    border-radius: 1.5rem;
+                    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                    transform: translateY(-50%);
+                    transition: transform 0.4s ease-in-out,
+                        width 0.3s ease-in-out;
+                }
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    position: relative;
+                    padding: 8px 16px;
+                    border-radius: 1.5rem;
+                    font-weight: 600;
+                    transition: @transition;
+                    z-index: 1;
+
+                    button {
+                        font-size: 14px;
+                        font-weight: 600;
+                        white-space: nowrap;
+                        background: transparent;
+                        color: @primary-color;
+                        border: none;
+                        padding: 0px 4px;
+                        transition: @transition;
+                    }
+
+                    // &:hover {
+                    //     background: fade(@primary-color, 10%);
+                    //     transform: scale(1.05);
+                    // }
+                }
+            }
+        }
+        .surah_box {
+            .collection_box {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 1rem;
+                margin-top: 1rem;
+                margin: auto;
+
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+
+                @primary-color: #db9e30;
+                @text-color: #333;
+                @shadow-light: rgba(0, 0, 0, 0.15);
+
+                .tq-quran-box {
+                    padding: 16px 20px;
+                    border: 1px solid fade(@primary-color, 50%);
+                    border-radius: 15px;
+                    background: #fff;
+                    transition: transform 0.3s ease-in-out,
+                        box-shadow 0.3s ease-in-out;
+                    margin-bottom: 1rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    text-decoration: none;
+                    position: relative;
+                    overflow: hidden;
+
+                    &:hover {
+                        transform: translateY(-6px);
+                        box-shadow: 0px 8px 16px @shadow-light;
+                    }
+
+                    .surah_name {
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+                        font-family: "Cinzel Decorative", serif;
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: @primary-color;
+
+                        .surah_number {
+                            width: 30px;
+                            height: 30px;
+                            background: @primary-color;
+                            color: white;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-family: "Times New Roman", Times, serif;
+                            font-size: 16px;
+                            font-weight: bold;
+                            position: relative;
+                            transform: rotate(135deg);
+                            border-radius: 8px;
+
+                            &::before {
+                                content: attr(data-number);
+                                position: absolute;
+                                transform: rotate(-135deg);
+                            }
+                        }
+
+                        .surah_info {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 4px;
+                        }
+                    }
+
+                    .surah_arabic {
+                        font-size: 24px;
+                        color: @text-color;
+                        font-weight: bold;
+                        font-family: "Amiri", serif;
+                        transition: color 0.3s ease-in-out;
+
+                        .tq-quran-box:hover & {
+                            color: @primary-color;
+                        }
                     }
                 }
             }
