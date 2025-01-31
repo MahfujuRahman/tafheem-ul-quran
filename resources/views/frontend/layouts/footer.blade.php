@@ -1,7 +1,7 @@
 <footer>
     <div class="w-100 tq-pt-120 tq-secondary-layer tq-opc75 tq-pb-40 position-relative">
         <div class="tq-fixed-bg tq-bg-secondary tq-bg-blend-luminosity"
-            style="background-image: url(../wp-content/themes/taqwa/assets/images/tq-bg7.jpg);"></div>
+            style="background-image: url(../frontend/themes/taqwa/assets/images/tq-bg7.jpg);"></div>
         <div class="container">
             <div class="tq-footer-body position-relative w-100">
                 <div class="row">
@@ -22,7 +22,7 @@
                                                 c11.74,1.01,18.55,6.68,21.6,17.95c0.69,2.54,1.86,4.14,4.45,4.71C176.75,63.77,180.78,67.35,184,72z" />
                                         </g>
                                     </svg><img class="img-fluid position-absolute"
-                                        src="../wp-content/uploads/2024/01/logo-insignia.png" loading="lazy"></a></div>
+                                        src="../frontend/uploads/2024/01/logo-insignia.png" loading="lazy"></a></div>
                             <!-- Logo -->
                         </div><!-- Widget Box -->
                     </div>

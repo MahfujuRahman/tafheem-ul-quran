@@ -176,13 +176,17 @@ header.tq-style2 .tq-header-wrapper .tq-header-inner {
         }
     }
     .surah_container {
-        margin-top: 70px;
+        margin-top: 100px;
+
+        @media screen and (max-width: 768px) {
+            margin-top: 0px;
+        }
         .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 2rem;
-
+            white-space: nowrap;
             .heading_box {
                 p {
                     font-size: 28px;
@@ -213,7 +217,7 @@ header.tq-style2 .tq-header-wrapper .tq-header-inner {
                 width: max-content;
 
                 @media screen and (max-width: 768px) {
-                    display: none;
+                    width: 100%;
                 }
 
                 .active-bg {
@@ -251,6 +255,14 @@ header.tq-style2 .tq-header-wrapper .tq-header-inner {
                         transition: @transition;
                     }
 
+                    @media screen and (max-width: 768px) {
+                        display: grid;
+                        place-items: center;
+                        height: 100%;
+                        width: 33.333333%;
+                        cursor: pointer;
+                    }
+
                     // &:hover {
                     //     background: fade(@primary-color, 10%);
                     //     transform: scale(1.05);
@@ -267,20 +279,21 @@ header.tq-style2 .tq-header-wrapper .tq-header-inner {
                 margin: auto;
 
                 @media screen and (max-width: 768px) {
-                    display: none;
+                    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                    gap: 0rem;
                 }
 
                 @primary-color: #db9e30;
                 @text-color: #333;
                 @shadow-light: rgba(0, 0, 0, 0.15);
+                @hover-bg: fade(@primary-color, 15%);
 
                 .tq-quran-box {
                     padding: 16px 20px;
                     border: 1px solid fade(@primary-color, 50%);
                     border-radius: 15px;
                     background: #fff;
-                    transition: transform 0.3s ease-in-out,
-                        box-shadow 0.3s ease-in-out;
+                    transition: all 0.3s ease-in-out;
                     margin-bottom: 1rem;
                     display: flex;
                     justify-content: space-between;
@@ -288,10 +301,23 @@ header.tq-style2 .tq-header-wrapper .tq-header-inner {
                     text-decoration: none;
                     position: relative;
                     overflow: hidden;
+                    // box-shadow: 0px 2px 8px fade(@shadow-light, 30%);
 
                     &:hover {
-                        transform: translateY(-6px);
-                        box-shadow: 0px 8px 16px @shadow-light;
+                        background-color: @hover-bg;
+                        // box-shadow: 0px 4px 12px fade(@shadow-light, 40%);
+
+                        // When hovering on the full box, also apply hover styles to the number box
+                        .surah_number {
+                            background: @primary-color;
+                            color: white !important;
+                            transform: rotate(0deg) scale(1.1);
+                            border-color: darken(@primary-color, 10%);
+
+                            &::before {
+                                transform: rotate(0deg);
+                            }
+                        }
                     }
 
                     .surah_name {
@@ -304,10 +330,10 @@ header.tq-style2 .tq-header-wrapper .tq-header-inner {
                         color: @primary-color;
 
                         .surah_number {
-                            width: 30px;
-                            height: 30px;
-                            background: @primary-color;
-                            color: white;
+                            width: 35px;
+                            height: 35px;
+                            border: 2px solid @primary-color;
+                            color: @primary-color;
                             display: flex;
                             align-items: center;
                             justify-content: center;
@@ -317,11 +343,13 @@ header.tq-style2 .tq-header-wrapper .tq-header-inner {
                             position: relative;
                             transform: rotate(135deg);
                             border-radius: 8px;
+                            transition: all 0.3s ease-in-out;
 
                             &::before {
                                 content: attr(data-number);
                                 position: absolute;
                                 transform: rotate(-135deg);
+                                transition: transform 0.3s ease-in-out;
                             }
                         }
 
@@ -329,6 +357,21 @@ header.tq-style2 .tq-header-wrapper .tq-header-inner {
                             display: flex;
                             flex-direction: column;
                             gap: 4px;
+
+                            :first-child {
+                                font-size: 16px;
+                                @media screen and (max-width: 768px) {
+                                    font-size: 14px;
+                                }
+                            }
+                            :last-child {
+                                font-family: "Times New Roman", Times, serif;
+                                font-size: 12px;
+                                color: @text-color;
+                                @media screen and (max-width: 768px) {
+                                    text-align: start;
+                                }
+                            }
                         }
                     }
 

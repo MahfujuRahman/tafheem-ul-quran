@@ -225,9 +225,10 @@
                 <div class="row surah_box">
 
                     <div class="collection_box">
+                        @for ($i = 1; $i < 13; $i++)
                         <a href="#" class="tq-quran-box">
                             <div class="surah_name">
-                                <div class="surah_number" data-number="1"></div>
+                                <div class="surah_number" data-number="{{ $i }}"></div>
                                 <div class="surah_info">
                                     <span>Al-Fatihah</span>
                                     <span>7 Ayah</span>
@@ -235,8 +236,9 @@
                             </div>
                             <div class="surah_arabic">بِسْمِ</div>
                         </a><!-- Quran Box -->
+                        @endfor
                     </div>
-                </div>  
+                </div>
             </div>
 
 
