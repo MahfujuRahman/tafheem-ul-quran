@@ -150,14 +150,12 @@
                                 <div>
                                     <p class="heading">Juz {{ $i }}</p>
                                 </div>
-
                                 @php
                                     // Generate unique random numbers for each Juz
                                     $randomNumbers = collect(range(1, 114))
                                         ->shuffle()
                                         ->take($juzCounts[$i - 1]);
                                 @endphp
-
                                 @foreach ($randomNumbers as $j)
                                     <a href="#" class="tq-quran-box">
                                         <div class="surah_name">
@@ -198,6 +196,7 @@
         </div>
     </div>
 </section>
+
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -258,5 +257,24 @@
         document.getElementById("pageSection").classList.remove('hidden');
         document.getElementById("surahSection").classList.add("hidden");
         document.getElementById("juzSection").classList.add('hidden');
+    });
+</script>
+
+<!-- Include Masonry.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var masonryGrid = new Masonry("#juzSection", {
+            itemSelector: ".juz_box",
+            gutter: 20, // Space between items
+            percentPosition: true,
+            fitWidth: true // Makes sure items align properly
+        });
+
+        // Reinitialize Masonry on window resize
+        window.addEventListener("resize", function() {
+            masonryGrid.layout();
+        });
     });
 </script>

@@ -336,86 +336,49 @@ header.tq-style2 .tq-header-wrapper .tq-header-inner {
   color: #db9e30;
 }
 .surah_box .collection_box {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  /* Keeps responsiveness */
-  gap: 1rem;
+  display: flex;
+  /* Masonry requires flex or block layout */
+  flex-wrap: wrap;
+  /* Ensure items wrap properly */
+  gap: 20px;
   width: 100%;
-  margin: auto;
-  align-items: start;
-  /* Makes each box take only the space it needs */
-  grid-auto-rows: auto;
-  /* Ensures rows only take necessary height */
-  grid-auto-flow: dense;
-  /* Forces shorter boxes to fill gaps */
-}
-@media screen and (max-width: 768px) {
-  .surah_box .collection_box {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  }
-}
-.surah_box .collection_box .juz_box:last-child {
-  margin-bottom: 0;
-  /* Ensure no extra space below the last element */
+  /* Laptop (≥ 769px) */
+  /* Large Screens (≥ 1301px) */
 }
 .surah_box .collection_box .juz_box {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
   background-color: #f3eee0;
   border-radius: 12px;
-  padding: 10px;
-  width: 100%;
-  height: auto !important;
-  /* Make sure it only takes needed height */
-  justify-content: flex-start;
-  /* Aligns content from top */
-  align-items: stretch;
-  /* Prevents extra spacing */
-  margin: 10px 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  width: calc(100% - 20px);
+  /* 1 column */
+  max-width: 100%;
+  /* Prevent overflow */
 }
 .surah_box .collection_box .juz_box .heading {
   font-size: 16px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  margin: 0px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 .surah_box .collection_box .juz_box .tq-quran-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 20px;
-  border: 1px solid rgba(219, 158, 48, 0.5);
-  border-radius: 15px;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
   background: #fff;
   transition: all 0.3s ease-in-out;
-  margin-bottom: 0rem !important;
-  flex-grow: 0;
-  /* Prevents stretching */
-  flex-shrink: 1;
-  /* Allows shrinking */
-  height: auto;
-  /* Takes only necessary height */
 }
 .surah_box .collection_box .juz_box .tq-quran-box:hover {
-  background-color: rgba(219, 158, 48, 0.15);
-}
-.surah_box .collection_box .juz_box .tq-quran-box:hover .surah_number {
-  background: #db9e30;
-  color: white !important;
-  transform: rotate(0deg) scale(1.1);
-  border-color: #b88220;
-}
-.surah_box .collection_box .juz_box .tq-quran-box:hover .surah_number::before {
-  transform: rotate(0deg);
+  background-color: #ffffff;
 }
 .surah_box .collection_box .juz_box .tq-quran-box .surah_name {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-family: "Cinzel Decorative", serif;
-  font-size: 16px;
-  font-weight: 600;
-  color: #db9e30;
+  gap: 10px;
 }
 .surah_box .collection_box .juz_box .tq-quran-box .surah_name .surah_number {
   width: 35px;
@@ -425,52 +388,39 @@ header.tq-style2 .tq-header-wrapper .tq-header-inner {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 16px;
   font-weight: bold;
-  position: relative;
-  transform: rotate(135deg);
-  border-radius: 8px;
-  transition: all 0.3s ease-in-out;
-}
-.surah_box .collection_box .juz_box .tq-quran-box .surah_name .surah_number::before {
-  content: attr(data-number);
-  position: absolute;
-  transform: rotate(-135deg);
-  transition: transform 0.3s ease-in-out;
+  border-radius: 6px;
 }
 .surah_box .collection_box .juz_box .tq-quran-box .surah_name .surah_info {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
-.surah_box .collection_box .juz_box .tq-quran-box .surah_name .surah_info :last-child {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 12px;
-  color: #333;
-}
-@media screen and (max-width: 768px) {
-  .surah_box .collection_box .juz_box .tq-quran-box .surah_name .surah_info :last-child {
-    text-align: start;
-  }
-}
-.surah_box .collection_box .juz_box .tq-quran-box .surah_name .surah_info :first-child {
-  font-size: 16px;
-}
-@media screen and (max-width: 768px) {
-  .surah_box .collection_box .juz_box .tq-quran-box .surah_name .surah_info :first-child {
-    font-size: 14px;
-  }
+.surah_box .collection_box .juz_box .tq-quran-box .surah_name .surah_info span {
+  font-size: 14px;
 }
 .surah_box .collection_box .juz_box .tq-quran-box .surah_arabic {
-  font-size: 24px;
-  color: #333;
+  font-size: 18px;
   font-weight: bold;
-  font-family: "Amiri", serif;
-  transition: color 0.3s ease-in-out;
+  color: #333;
 }
-.tq-quran-box:hover .surah_box .collection_box .juz_box .tq-quran-box .surah_arabic {
-  color: #db9e30;
+@media screen and (min-width: 768px) {
+  .surah_box .collection_box .juz_box {
+    width: calc(50% - 20px);
+    /* 2 columns */
+  }
+}
+@media screen and (min-width: 1024px) {
+  .surah_box .collection_box .juz_box {
+    width: calc(33.33% - 20px);
+    /* 3 columns */
+  }
+}
+@media screen and (min-width: 1301px) {
+  .surah_box .collection_box .juz_box {
+    width: calc(25% - 20px);
+    /* 4 columns */
+  }
 }
 .hidden {
   display: none !important;
