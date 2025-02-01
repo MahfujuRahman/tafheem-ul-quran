@@ -237,7 +237,7 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        document.getElementById("surahSection").click();
+        document.getElementById("surahBtn").click();
     });
 
     document.getElementById("surahBtn").addEventListener("click", function() {

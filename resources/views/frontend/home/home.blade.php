@@ -8,7 +8,7 @@
         <div class="elementor elementor-2693">
                 @include('frontend.home.sections.banner')
                 @include('frontend.home.sections.quranPara')
-                {{-- @include('frontend.home.sections.surah') --}}
+                @include('frontend.home.sections.time')
 
         </div>
 
