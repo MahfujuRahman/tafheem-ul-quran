@@ -1,0 +1,882 @@
+header.tq-style2 .tq-header-wrapper .tq-header-inner {
+    padding: 0px !important;
+}
+
+.tq-header-wrapper {
+    .tq-header-menu {
+        padding: 20px;
+        nav {
+            padding-top: 20px;
+            ul {
+                white-space: nowrap;
+                @media screen and (max-width: 1200px) {
+                    gap: 1.125rem !important;
+                }
+                @media screen and (max-width: 1400px) {
+                    gap: 2.125rem;
+                }
+                li {
+                    a {
+                        @media (max-width: 1400px) {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.tq-header-menu nav ul li.menu-item-has-children > a::before,
+.tq-sticky-menu-inner nav ul li.menu-item-has-children > a::before {
+    content: "";
+}
+
+.tq-header-menu nav ul li.menu-item-has-children > a,
+.tq-sticky-menu-inner nav ul li.menu-item-has-children > a {
+    padding-right: 0rem;
+}
+
+.tq-select-box .dropdown > button.btn:after {
+    content: "";
+}
+
+@media (max-width: 995px) {
+    .tq-player-wrap > h6 {
+        width: unset;
+    }
+}
+@media (max-width: 995px) {
+    .tq-player-wrap {
+        flex-direction: row;
+    }
+}
+
+.surah_list {
+    .tq-quran-arabic-boxes {
+        .surah_collection_boxs {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            .heading_box {
+                p {
+                    font-size: 28px;
+                    color: #392f26;
+                    font-weight: 700;
+                    margin-bottom: 1rem;
+                }
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+            }
+
+            @primary-color: #392f26;
+            @bg-light: #f3eee0;
+            @bg-active: #fff;
+            @transition: all 0.3s ease-in-out;
+
+            .heading_buttons {
+                background: @bg-light;
+                border-radius: 1.5rem;
+                display: flex;
+                align-items: center;
+                padding: 0px;
+                margin: 0px;
+                position: relative;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                width: max-content;
+
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+
+                .active-bg {
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    height: 100%;
+                    width: 80px;
+                    border-radius: 1.5rem;
+                    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                    transform: translateY(-50%);
+                    transition: transform 0.4s ease-in-out,
+                        width 0.3s ease-in-out;
+                }
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    position: relative;
+                    padding: 8px 16px;
+                    border-radius: 1.5rem;
+                    font-weight: 600;
+                    transition: @transition;
+                    z-index: 1;
+
+                    button {
+                        font-size: 14px;
+                        font-weight: 600;
+                        white-space: nowrap;
+                        background: transparent;
+                        color: @primary-color;
+                        border: none;
+                        padding: 0px 4px;
+                        transition: @transition;
+                    }
+
+                    // &:hover {
+                    //     background: fade(@primary-color, 10%);
+                    //     transform: scale(1.05);
+                    // }
+                }
+            }
+
+            .collection_box {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 1rem;
+                margin-top: 1rem;
+                margin: auto;
+
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+
+                .tq-quran-box {
+                    padding: 14px;
+                    border: 1px solid rgba(141, 141, 96, 0.62);
+                    border-radius: 15px;
+                    background: #fff;
+                    transition: transform 0.3s ease-in-out,
+                        box-shadow 0.3s ease-in-out;
+                    margin-bottom: 0px;
+
+                    &:hover {
+                        transform: translateY(-4px);
+                        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+                    }
+
+                    h4 {
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: #392f26;
+                        margin-bottom: 6px;
+                        padding: 0px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        color: #555;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+    .surah_container {
+        margin-top: 100px;
+
+        @media screen and (max-width: 768px) {
+            margin-top: 0px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            white-space: nowrap;
+            .heading_box {
+                p {
+                    font-size: 28px;
+                    color: #392f26;
+                    font-weight: 700;
+                    margin-bottom: 1rem;
+                }
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+            }
+
+            @primary-color: #392f26;
+            @bg-light: #f3eee0;
+            @bg-active: #fff;
+            @transition: all 0.3s ease-in-out;
+
+            .heading_buttons {
+                background: @bg-light;
+                border-radius: 1.5rem;
+                display: flex;
+                align-items: center;
+                padding: 3px;
+                margin: 0px;
+                position: relative;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                width: max-content;
+
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                }
+
+                .active-bg {
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    height: 80%;
+                    width: 80px;
+                    border-radius: 1.5rem;
+                    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                    transform: translateY(-50%);
+                    transition: transform 0.4s ease-in-out,
+                        width 0.3s ease-in-out;
+                }
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    position: relative;
+                    padding: 8px 16px;
+                    border-radius: 1.5rem;
+                    font-weight: 600;
+                    transition: @transition;
+                    z-index: 1;
+
+                    button {
+                        font-size: 14px;
+                        font-weight: 600;
+                        white-space: nowrap;
+                        background: transparent;
+                        color: @primary-color;
+                        border: none;
+                        padding: 0px 4px;
+                        transition: @transition;
+                    }
+
+                    @media screen and (max-width: 768px) {
+                        display: grid;
+                        place-items: center;
+                        height: 100%;
+                        width: 33.333333%;
+                        cursor: pointer;
+                    }
+
+                    // &:hover {
+                    //     background: fade(@primary-color, 10%);
+                    //     transform: scale(1.05);
+                    // }
+                }
+            }
+        }
+        .surah_box {
+            .collection_box {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 1rem;
+                margin-top: 1rem;
+                margin: auto;
+
+                @media screen and (max-width: 768px) {
+                    grid-template-columns: repeat(
+                        auto-fill,
+                        minmax(200px, 1fr)
+                    );
+                    gap: 0.5rem;
+                }
+
+                @primary-color: #db9e30;
+                @text-color: #333;
+                @shadow-light: rgba(0, 0, 0, 0.15);
+                @hover-bg: fade(@primary-color, 15%);
+
+                .tq-quran-box {
+                    padding: 16px 20px;
+                    border: 1px solid fade(@primary-color, 50%);
+                    border-radius: 15px;
+                    background: #fff;
+                    transition: all 0.3s ease-in-out;
+                    // margin-bottom: 1rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    text-decoration: none;
+                    position: relative;
+                    overflow: hidden;
+                    // box-shadow: 0px 2px 8px fade(@shadow-light, 30%);
+
+                    &:hover {
+                        background-color: @hover-bg;
+                        // box-shadow: 0px 4px 12px fade(@shadow-light, 40%);
+
+                        // When hovering on the full box, also apply hover styles to the number box
+                        .surah_number {
+                            background: @primary-color;
+                            color: white !important;
+                            transform: rotate(0deg) scale(1.1);
+                            border-color: darken(@primary-color, 10%);
+
+                            &::before {
+                                transform: rotate(0deg);
+                            }
+                        }
+                    }
+
+                    .surah_name {
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+                        font-family: "Cinzel Decorative", serif;
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: @primary-color;
+
+                        .surah_number {
+                            width: 35px;
+                            height: 35px;
+                            border: 2px solid @primary-color;
+                            color: @primary-color;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-family: "Times New Roman", Times, serif;
+                            font-size: 16px;
+                            font-weight: bold;
+                            position: relative;
+                            transform: rotate(135deg);
+                            border-radius: 8px;
+                            transition: all 0.3s ease-in-out;
+
+                            &::before {
+                                content: attr(data-number);
+                                position: absolute;
+                                transform: rotate(-135deg);
+                                transition: transform 0.3s ease-in-out;
+                            }
+                        }
+
+                        .surah_info {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 4px;
+
+                            :last-child {
+                                font-family: "Times New Roman", Times, serif;
+                                font-size: 12px;
+                                color: @text-color;
+                                @media screen and (max-width: 768px) {
+                                    text-align: start;
+                                }
+                            }
+                            :first-child {
+                                font-size: 16px;
+                                @media screen and (max-width: 768px) {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+
+                    .surah_arabic {
+                        font-size: 24px;
+                        color: @text-color;
+                        font-weight: bold;
+                        font-family: "Amiri", serif;
+                        transition: color 0.3s ease-in-out;
+
+                        .tq-quran-box:hover & {
+                            color: @primary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@primary-color: #db9e30;
+@text-color: #333;
+@shadow-light: rgba(0, 0, 0, 0.15);
+@hover-bg: fade(@primary-color, 15%);
+
+.surah_box {
+    .collection_box {
+        display: flex; /* Masonry requires flex or block layout */
+        flex-wrap: wrap; /* Ensure items wrap properly */
+        gap: 20px;
+        width: 100%;
+
+        .juz_box {
+            background-color: rgb(243 238 224);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+            width: calc(100% - 20px); /* 1 column */
+            max-width: 100%; /* Prevent overflow */
+
+            .heading {
+                font-size: 16px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            .tq-quran-box {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                border-radius: 10px;
+                background: #fff;
+                margin-bottom: 1rem;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    background-color: lighten(rgb(243 238 224), 10%);
+                }
+
+                .surah_name {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    .surah_number {
+                        width: 35px;
+                        height: 35px;
+                        border: 2px solid #db9e30;
+                        color: #db9e30;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-weight: bold;
+                        border-radius: 6px;
+                    }
+
+                    .surah_info {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 4px;
+
+                        span {
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                .surah_arabic {
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: #333;
+                }
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            .juz_box {
+                width: calc(50% - 20px); /* 2 columns */
+            }
+        }
+
+        /* Laptop (≥ 769px) */
+        @media screen and (min-width: 1024px) {
+            .juz_box {
+                width: calc(33.33% - 20px); /* 3 columns */
+            }
+        }
+
+        /* Large Screens (≥ 1301px) */
+        @media screen and (min-width: 1301px) {
+            .juz_box {
+                width: calc(25% - 20px); /* 4 columns */
+            }
+        }
+    }
+}
+
+.roja_left {
+    padding: 15px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    max-height: 100vh;
+    overflow-y: auto;
+
+    .roja_timming {
+        margin-bottom: 15px;
+        background: #f8f9fa;
+        padding: 15px;
+        border-radius: 10px;
+
+        h3 {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        > div {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+            gap: 10px !important;
+
+            div {
+                background: #ffffff;
+                padding: 12px;
+                border-radius: 8px;
+                text-align: center;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+                strong {
+                    color: #28a745;
+                    font-size: 1rem;
+                    display: block;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+
+    .roja_tables {
+        background: #f8f9fa;
+        border-radius: 10px;
+        padding: 15px;
+
+        .roja_heading {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .d-flex {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 10px !important;
+        }
+
+        .timing-section {
+            background: #ffffff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+            .section-title {
+                background: linear-gradient(135deg, #28a745, #20c997);
+                color: #ffffff;
+                padding: 8px;
+                border-radius: 6px;
+                text-align: center;
+                margin-bottom: 10px;
+                font-size: 0.9rem;
+            }
+
+            table {
+                width: 100%;
+                background: #ffffff;
+                border-radius: 6px;
+                border-collapse: collapse;
+
+                th {
+                    background: #343a40;
+                    color: #ffffff;
+                    padding: 8px 6px;
+                    font-size: 0.8rem;
+                    text-transform: uppercase;
+                    white-space: nowrap;
+                }
+
+                td {
+                    padding: 6px;
+                    border: 1px solid #e9ecef;
+                    font-size: 0.8rem;
+                    white-space: nowrap;
+                }
+
+                tr:nth-child(even) {
+                    background: #f8f9fa;
+                }
+            }
+        }
+    }
+
+    /* Mobile Devices (up to 767px) */
+    @media (max-width: 767px) {
+        max-height: none;
+        overflow-y: visible;
+        padding: 10px;
+
+        .roja_timming {
+            > div {
+                grid-template-columns: 1fr !important;
+            }
+
+            h3 {
+                font-size: 1rem;
+                padding: 8px 10px;
+            }
+
+            div {
+                font-size: 0.9rem;
+
+                strong {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+
+        .roja_tables {
+            padding: 10px !important;
+
+            .roja_heading {
+                font-size: 1rem;
+                padding: 8px;
+            }
+
+            .d-flex {
+                grid-template-columns: 1fr !important;
+            }
+
+            .timing-section {
+                .section-title {
+                    font-size: 0.8rem;
+                }
+
+                table {
+                    th,
+                    td {
+                        font-size: 0.7rem;
+                        padding: 4px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Tablets (768px - 991px) */
+    @media (min-width: 768px) and (max-width: 991px) {
+        .roja_tables .d-flex {
+            grid-template-columns: repeat(2, 1fr) !important;
+        }
+    }
+
+    /* Laptops/Desktops (992px - 1199px) */
+    @media (min-width: 992px) and (max-width: 1199px) {
+        .roja_tables .d-flex {
+            grid-template-columns: repeat(2, 1fr) !important;
+        }
+    }
+
+    /* Large Screens (1200px+) */
+    @media (min-width: 1200px) {
+        .roja_tables .d-flex {
+            grid-template-columns: repeat(3, 1fr) !important;
+        }
+    }
+
+    /* Scrollbar Styling */
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #f0f0f0;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #28a745;
+        border-radius: 3px;
+    }
+}
+
+.prayer-time-section {
+    padding: 1rem;
+}
+
+.prayer-card {
+    background: #ffffff;
+    border-radius: 1.5rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.prayer-gradient-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    z-index: 1;
+}
+
+.prayer-content {
+    padding: 2rem;
+    z-index: 2;
+}
+
+.prayer-header {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.prayer-title {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+.prayer-subtitle {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.prayer-times-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.prayer-item {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.prayer-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.prayer-icon {
+    font-size: 1.75rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    color: white;
+}
+
+.prayer-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.prayer-name {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.prayer-time {
+    font-weight: 700;
+    color: #3498db;
+    font-size: 1.1rem;
+    font-family: "Courier New", monospace;
+}
+
+/* Icon Colors */
+.fajr .prayer-icon {
+    background: #f39c12;
+}
+.dhuhr .prayer-icon {
+    background: #e74c3c;
+}
+.asr .prayer-icon {
+    background: #27ae60;
+}
+.maghrib .prayer-icon {
+    background: #9b59b6;
+}
+.isha .prayer-icon {
+    background: #34495e;
+}
+.jummah .prayer-icon {
+    background: #2980b9;
+}
+
+@media (max-width: 768px) {
+    .prayer-card {
+        border-radius: 1rem;
+    }
+
+    .prayer-content {
+        padding: 1.5rem;
+    }
+
+    .prayer-title {
+        font-size: 1.5rem;
+    }
+
+    .prayer-item {
+        padding: 1rem;
+    }
+
+    .prayer-icon {
+        font-size: 1.5rem;
+        width: 40px;
+        height: 40px;
+    }
+
+    .prayer-name {
+        font-size: 0.9rem;
+    }
+
+    .prayer-time {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .prayer-times-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .prayer-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .prayer-icon {
+        margin-right: 0;
+        margin-bottom: 0.75rem;
+    }
+}
+
+.tq-about-img-wrap {
+    .tq-about-img2 {
+        text-align: center;
+    }
+    img {
+        max-height: 300px;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+.hidden {
+    display: none !important;
+}
