@@ -197,6 +197,9 @@
     </div>
 </section>
 
+<!-- Include Masonry.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -237,7 +240,7 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        document.getElementById("surahBtn").click();
+        document.getElementById("juzBtn").click();
     });
 
     document.getElementById("surahBtn").addEventListener("click", function() {
@@ -259,9 +262,6 @@
         document.getElementById("juzSection").classList.add('hidden');
     });
 </script>
-
-<!-- Include Masonry.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
