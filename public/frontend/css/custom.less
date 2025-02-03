@@ -497,6 +497,386 @@ header.tq-style2 .tq-header-wrapper .tq-header-inner {
     }
 }
 
+.roja_left {
+    padding: 15px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    max-height: 100vh;
+    overflow-y: auto;
+
+    .roja_timming {
+        margin-bottom: 15px;
+        background: #f8f9fa;
+        padding: 15px;
+        border-radius: 10px;
+
+        h3 {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        > div {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+            gap: 10px !important;
+
+            div {
+                background: #ffffff;
+                padding: 12px;
+                border-radius: 8px;
+                text-align: center;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+                strong {
+                    color: #28a745;
+                    font-size: 1rem;
+                    display: block;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+
+    .roja_tables {
+        background: #f8f9fa;
+        border-radius: 10px;
+        padding: 15px;
+
+        .roja_heading {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .d-flex {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 10px !important;
+        }
+
+        .timing-section {
+            background: #ffffff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+            .section-title {
+                background: linear-gradient(135deg, #28a745, #20c997);
+                color: #ffffff;
+                padding: 8px;
+                border-radius: 6px;
+                text-align: center;
+                margin-bottom: 10px;
+                font-size: 0.9rem;
+            }
+
+            table {
+                width: 100%;
+                background: #ffffff;
+                border-radius: 6px;
+                border-collapse: collapse;
+
+                th {
+                    background: #343a40;
+                    color: #ffffff;
+                    padding: 8px 6px;
+                    font-size: 0.8rem;
+                    text-transform: uppercase;
+                    white-space: nowrap;
+                }
+
+                td {
+                    padding: 6px;
+                    border: 1px solid #e9ecef;
+                    font-size: 0.8rem;
+                    white-space: nowrap;
+                }
+
+                tr:nth-child(even) {
+                    background: #f8f9fa;
+                }
+            }
+        }
+    }
+
+    /* Mobile Devices (up to 767px) */
+    @media (max-width: 767px) {
+        max-height: none;
+        overflow-y: visible;
+        padding: 10px;
+
+        .roja_timming {
+            > div {
+                grid-template-columns: 1fr !important;
+            }
+
+            h3 {
+                font-size: 1rem;
+                padding: 8px 10px;
+            }
+
+            div {
+                font-size: 0.9rem;
+
+                strong {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+
+        .roja_tables {
+            padding: 10px !important;
+
+            .roja_heading {
+                font-size: 1rem;
+                padding: 8px;
+            }
+
+            .d-flex {
+                grid-template-columns: 1fr !important;
+            }
+
+            .timing-section {
+                .section-title {
+                    font-size: 0.8rem;
+                }
+
+                table {
+                    th,
+                    td {
+                        font-size: 0.7rem;
+                        padding: 4px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Tablets (768px - 991px) */
+    @media (min-width: 768px) and (max-width: 991px) {
+        .roja_tables .d-flex {
+            grid-template-columns: repeat(2, 1fr) !important;
+        }
+    }
+
+    /* Laptops/Desktops (992px - 1199px) */
+    @media (min-width: 992px) and (max-width: 1199px) {
+        .roja_tables .d-flex {
+            grid-template-columns: repeat(2, 1fr) !important;
+        }
+    }
+
+    /* Large Screens (1200px+) */
+    @media (min-width: 1200px) {
+        .roja_tables .d-flex {
+            grid-template-columns: repeat(3, 1fr) !important;
+        }
+    }
+
+    /* Scrollbar Styling */
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #f0f0f0;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #28a745;
+        border-radius: 3px;
+    }
+}
+
+.prayer-time-section {
+    padding: 1rem;
+}
+
+.prayer-card {
+    background: #ffffff;
+    border-radius: 1.5rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.prayer-gradient-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 180px;
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    z-index: 1;
+}
+
+.prayer-content {
+    padding: 2rem;
+    z-index: 2;
+}
+
+.prayer-header {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.prayer-title {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+.prayer-subtitle {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.prayer-times-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.prayer-item {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.prayer-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.prayer-icon {
+    font-size: 1.75rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    color: white;
+}
+
+.prayer-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.prayer-name {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.prayer-time {
+    font-weight: 700;
+    color: #3498db;
+    font-size: 1.1rem;
+    font-family: "Courier New", monospace;
+}
+
+/* Icon Colors */
+.fajr .prayer-icon {
+    background: #f39c12;
+}
+.dhuhr .prayer-icon {
+    background: #e74c3c;
+}
+.asr .prayer-icon {
+    background: #27ae60;
+}
+.maghrib .prayer-icon {
+    background: #9b59b6;
+}
+.isha .prayer-icon {
+    background: #34495e;
+}
+.jummah .prayer-icon {
+    background: #2980b9;
+}
+
+@media (max-width: 768px) {
+    .prayer-card {
+        border-radius: 1rem;
+    }
+
+    .prayer-content {
+        padding: 1.5rem;
+    }
+
+    .prayer-title {
+        font-size: 1.5rem;
+    }
+
+    .prayer-item {
+        padding: 1rem;
+    }
+
+    .prayer-icon {
+        font-size: 1.5rem;
+        width: 40px;
+        height: 40px;
+    }
+
+    .prayer-name {
+        font-size: 0.9rem;
+    }
+
+    .prayer-time {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .prayer-times-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .prayer-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .prayer-icon {
+        margin-right: 0;
+        margin-bottom: 0.75rem;
+    }
+}
+
+.tq-about-img-wrap {
+    .tq-about-img2 {
+        text-align: center;
+    }
+    img {
+        max-height: 300px;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
 .hidden {
     display: none !important;
 }
