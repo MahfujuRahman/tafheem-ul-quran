@@ -25,9 +25,9 @@
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3470">
                                         <a href="../audios/index.html">Sermons</a>
                                     </li>
-                                    <li id="menu-item-2705"
+                                    <li
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2705">
-                                        <a href="../contact-us/index.html">Contact</a>
+                                        <a href="{{ route('contact') }}">Contact</a>
                                     </li>
                                 </ul>
                             </nav><!-- Navigation -->
